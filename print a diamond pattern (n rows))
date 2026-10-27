@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+int main() {
+	int i = 0, j = 0,m=0,n=0,x=0; //i代表列数，j代表行数，n是输入的数，最长多长，x代表空格
+	cin >> n;
+	for (j = 1;j <= n;j++)
+	{
+		
+		if (j <= (1+n)/2) {
+			for (x = 1;x <= (n - 2*j+1) / 2;x++)
+			{
+				cout << " ";
+			}
+
+			for (m = 1;m <= j * 2 - 1;m++)
+			{
+				cout << "*";
+			}
+			
+		}
+		else {
+			for (x = 1;x <= (2 * j - n - 1) / 2;x++)
+			{
+				cout << " ";
+			}
+			for (m = 1;m <= (2 * n + 1) - 2 * j;m++)
+			{
+				cout << "*";
+			}
+			
+		}
+		cout << endl;
+	}
+
+	return 0;
+}
